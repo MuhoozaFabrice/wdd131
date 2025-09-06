@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0a3b68;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+nav {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+/* About Me */
+.about, .resources {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about h2, .resources h2 {
+  background: #0a3b68;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.about-content p {
+  flex: 2;
+  margin-right: 1rem;
+}
+
+.profile-img {
+  width: 120px;
+  border: 1px solid #999;
+}
+
+.location {
+  padding: 1rem;
+}
+
+.location h3 {
+  margin: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.25rem;
+}
+
+.flag-text {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.flag {
+  width: 120px;
+  margin-right: 1rem;
+}
+
+/* Resources */
+.resources ul {
+  padding: 1rem;
+  list-style: none;
+}
+
+.resources li {
+  margin: 0.5rem 0;
+}
+
+.resources a {
+  color: #3a0dbf;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #0a3b68;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+footer .last-modification {
+  color: yellow;
+  font-size: 0.9rem;
+}

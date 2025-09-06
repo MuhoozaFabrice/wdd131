@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131: Dynamic Web Fundamentals</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - BYUI</h1>
+  <!-- Header -->
+  <header>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Muhooza Fabrice</span></h1>
+    <nav>
+      <a href="https://www.linkedin.com/">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Me Section -->
+    <section class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I am a software development student focused on web development and programming. I enjoy building user-friendly applications, improving my skills in HTML, CSS, and JavaScript, and creating solutions that make a positive impact.
+        </p>
+        <img src="images/profile.png" alt="Profile picture" class="profile-img">
+      </div>
+
+      <div class="location">
+        <h3>Democratic Republic of Congo, South Kivu.</h3>
+        <div class="flag-text">
+          <img src="images/DRC.png" alt="Flag of Madagascar" class="flag">
+          <p><em>South Kivu, Democratic Republic of Congo</em></p>
+        </div>
+        <p>
+          South Kivu is a province in the eastern part of the Democratic Republic of Congo, located along the shores of Lake Kivu and bordering Rwanda and Burundi. Its capital city is Bukavu, known for its scenic hills and views of Lake Kivu. The region is rich in natural resources, diverse cultures, and stunning landscapes, including parts of Kahuzi-Biega National Park, home to endangered eastern lowland gorillas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Web Dev Resources Section -->
+    <section class="resources">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to/">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/">Udemy</a></li>
+        <li><a href="https://via.placeholder.com/">Image Placeholder</a></li>
+      </ul>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p> <span id="currentyear"></span> 🌸 Muhooza Fabrice 🌸 • Democratic Republic of Congo</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
