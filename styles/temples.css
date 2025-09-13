@@ -176,7 +176,7 @@ footer .last-modification {
   color: yellow;
   font-size: 0.9rem;
 }
-/* Accessibility: reduce motion */
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }

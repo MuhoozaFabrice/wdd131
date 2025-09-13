@@ -75,7 +75,7 @@
   .site-footer { text-align: left; }
 }
 
-/* Medium screens: 2 columns */
+
 @media (min-width: 32rem) and (max-width: 47.99rem) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
