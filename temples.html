@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temple Album</title>
+
+  <!-- SEO meta -->
+  <meta name="description" content="A responsive picture album featuring beautiful temples with images and captions.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Mobile-first CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <!-- Larger-view CSS overrides -->
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- Defer JS -->
+  <script defer src="scripts/temples.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">Temple Album</div>
+
+      <!-- Hamburger button (mobile only) -->
+      <button id="hamburger" class="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger-icon">☰</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" id="main-content">
+    <div class="container">
+      <h1>My Temple Album</h1>
+
+      <section class="gallery" aria-label="Temple pictures">
+        <!-- 9 figure elements (add real temple images) -->
+        <figure class="temple">
+          <img src="images/temple1.jpeg" alt="Temple 1" width="600" height="400" loading="lazy">
+          <figcaption>Temple One</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple2.jpeg" alt="Temple 2" width="600" height="400" loading="lazy">
+          <figcaption>Temple Two</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple3.jpeg" alt="Temple 3" width="600" height="400" loading="lazy">
+          <figcaption>Temple Three</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple4.jpeg" alt="Temple 4" width="600" height="400" loading="lazy">
+          <figcaption>Temple Four</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple5.jpeg" alt="Temple 5" width="600" height="400" loading="lazy">
+          <figcaption>Temple Five</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple6.jpeg" alt="Temple 6" width="600" height="400" loading="lazy">
+          <figcaption>Temple Six</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple7.jpeg" alt="Temple 7" width="600" height="400" loading="lazy">
+          <figcaption>Temple Seven</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple8.jpeg" alt="Temple 8" width="600" height="400" loading="lazy">
+          <figcaption>Temple Eight</figcaption>
+        </figure>
+
+        <figure class="temple">
+          <img src="images/temple9.jpeg" alt="Temple 9" width="600" height="400" loading="lazy">
+          <figcaption>Temple Nine</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p id="copyright">
+        <p> <span id="currentyear"></span> 🌸 Muhooza Fabrice 🌸 • Democratic Republic of Congo</p>
+      </p>
+      <p id="modified">Last modified:
+        <time id="lastmodified">unknown</time>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* temples-large.css */
+
+/* Show regular nav (non-hamburger) and change layout in larger view */
+@media (min-width: 48rem) {
+  .header-inner {
+    padding: 0 2rem;
+  }
+
+  /* show nav inline and hide hamburger on larger screens */
+  .hamburger {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    display: block !important;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    margin-left: auto;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-list a {
+    padding: 0.5rem 0.8rem;
+    color: rgba(255,255,255,0.95);
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  /* nav hover when in header (contrasting to header bg) */
+  .nav-list a:hover,
+  .nav-list a:focus {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  /* make header text white (contrasts with header gradient) */
+  .brand { color: white; }
+  .header-inner .nav-list a { color: rgba(255,255,255,0.95); }
+
+  /* container width and centering for main */
+  .container {
+    padding: 2rem;
+  }
+
+  /* Grid for gallery: change to 3 columns with nice gaps */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Larger image cropping */
+  .temple img {
+    aspect-ratio: 4/3;
+  }
+
+  /* Footer inline details */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .site-footer { text-align: left; }
+}
+
+/* Medium screens: 2 columns */
+@media (min-width: 32rem) and (max-width: 47.99rem) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

@@ -131,3 +131,12 @@ footer .last-modification {
   color: yellow;
   font-size: 0.9rem;
 }
+/* Main Layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;  /* About Me takes more space, Resources smaller */
+  gap: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  align-items: start; /* ensures top alignment */
+}
