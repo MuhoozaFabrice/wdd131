@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Democratic Republic of the Congo — Country Page</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/place.css">
+
+  <!-- Defer JS -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Democratic Republic of the Congo</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO / RESPONSIVE IMAGE -->
+    <section class="hero">
+      <picture>
+        <!-- large desktops -->
+        <source srcset="images/bukavu.jpeg" media="(min-width: 1000px)" type="image/webp">
+        <!-- tablets -->
+        <source srcset="images/congo.jpg" media="(min-width: 600px)" type="image/webp">
+        <!-- fallback / mobile -->
+        <img src="images/congo.jpeg" alt="View of Kinshasa or Congo River" class="hero-img">
+      </picture>
+    </section>
+
+    <!-- DATA + WEATHER -->
+    <section class="info-grid">
+      <article class="data-card">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 2,344,858 km²</li>
+          <li><strong>Population:</strong> 95,895,000</li>
+          <li><strong>Capital:</strong> Kinshasa</li>
+          <li><strong>Languages:</strong> French (official), Lingala, Kikongo, Swahili, Tshiluba</li>
+          <li><strong>Currency:</strong> Congolese Franc (CDF)</li>
+          <li><strong>Time Zone:</strong> UTC+1 to UTC+2</li>
+          <li><strong>Calling Code:</strong> +243</li>
+        </ul>
+      </article>
+
+      <article class="weather-card">
+        <h2 class="weather-heading">Weather</h2>
+
+        <!-- Mobile SVG icon (visible on small screens) -->
+        <div class="weather-icon-mobile" aria-hidden="true">
+          <img src="images/weather.png" alt="" />
+        </div>
+
+        <div class="weather-values">
+          <!-- static values (used also by JS for windchill) -->
+          <p><strong>Temperature:</strong> <span id="temp">27</span> °C</p>
+          <p><strong>Condition:</strong> Partly Cloudy</p>
+          <p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+          <p><strong>Wind Chill:</strong> <span id="windchill">—</span></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="owner">Muhooza Fabrice</span> <span id="year"></span> | Last Modified:
+        <time id="lastModified" datetime=""></time>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
