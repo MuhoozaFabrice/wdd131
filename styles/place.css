@@ -179,7 +179,7 @@ a:focus, button:focus {outline:3px solid #ffd54f}
   .weather-heading::after{content:""} /* ensure pseudo empty on mobile */
 }
 
-/* small visual polish */
+
 @media (prefers-reduced-motion: no-preference){
   .hero-img { transition: transform .45s ease; }
   .hero-img:hover { transform: scale(1.02); }
