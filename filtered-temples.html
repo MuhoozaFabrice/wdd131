@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Filtered Temples</title>
+
+  <!-- SEO meta -->
+  <meta name="Muhooza Fabrice" content="A responsive picture album featuring beautiful temples with filters and lazy-loaded images.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Mobile-first CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+
+  <!-- Defer JS -->
+  <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">Temple Album</div>
+
+      <!-- Hamburger button (mobile only) -->
+      <button id="hamburger" class="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger-icon">☰</span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#" id="home">Home</a></li>
+          <li><a href="#" id="old">Old</a></li>
+          <li><a href="#" id="new">New</a></li>
+          <li><a href="#" id="large">Large</a></li>
+          <li><a href="#" id="small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" id="main-content">
+    <div class="container">
+      <h1>My Temple Album</h1>
+
+      <section class="gallery" id="temple-cards" aria-label="Temple pictures">
+        <!-- JavaScript will inject temple cards here -->
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+        <p><span id="currentyear"></span> 🌸 Muhooza Fabrice 🌸 • Democratic Republic of Congo</p>
+        <p id="modified">Last modified:</p>
+        <p id="lastmodified">unknown</p>
+    </div>
+  </footer>
+</body>
+</html>
