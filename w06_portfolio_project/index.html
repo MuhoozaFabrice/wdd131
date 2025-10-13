@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Fabrice Dev Portfolio — modern web developer portfolio.">
+  <title>Fabrice Dev — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header container">
+    <a class="logo" href="index.html">Fabrice<span class="dot">.</span>Dev</style></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Hi, I’m <span>Fabrice</span></h1>
+        <p class="lead">I build modern, accessible, and responsive websites. I focus on clean design, performance, and usability.</p>
+        <p class="cta-row">
+          <a class="btn btn-primary" href="projects.html">See projects</a>
+          <a class="btn" href="contact.html">Contact me</a>
+        </p>
+
+        
+
+      <div class="hero-right">
+        <div class="hero-card" aria-hidden="true">
+          <img id="heroPreview" src="images/Hero image.png" alt="Hero image" loading="lazy" width="10" height="10" >
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-heading">
+      <div class="section-head">
+        <h2 id="featured-heading">Featured Projects</h2>
+        <div class="filter-row">
+          <button id="showFeatured" class="btn small">Featured</button>
+          <button id="showAll" class="btn small ghost">All</button>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="grid project-grid" aria-live="polite">
+        <div id="projectGrid">
+    
+    <article class="project-card" tabindex="0" data-featured="true">
+        <img src="images/hero.jpeg" alt="White Water Rafting screenshot" loading="lazy">
+        
+        <h3>White Water Rafting</h3>
+        <p>Responsive site for a rafting business with booking flow.</p>
+        <button class="btn small">View <a href="https://muhoozafabrice.github.io/wdd130/wwr/contact.html"></a></button>
+    </article>
+
+    <article class="project-card" tabindex="0" data-featured="true">
+        <img src="images/coding.jpg" alt="Portfolio (this site) screenshot" loading="lazy">
+        
+        <h3>Portfolio (this site)</h3>
+        <p>Personal portfolio demonstrating accessibility & performance.</p>
+        <button class="btn small">View</button>
+    </article>
+
+    <article class="project-card" tabindex="0" data-featured="false">
+        <img src="assets/images/project3-800.webp" alt="Contact App screenshot" loading="lazy">
+        
+        <h3>Contact App</h3>
+        <p>Demo app using form validation and localStorage.</p>
+        <button class="btn small">View</button>
+    </article>
+
+</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; 2025 Fabrice Dev Portfolio — <a href="refs.html">References</a></p>
+  </footer>
+
+  <div id="modalRoot" aria-hidden="true"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

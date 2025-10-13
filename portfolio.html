@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Fabrice Dev Portfolio — web developer portfolio showcasing projects, skills, and contact info.">
+  <title>Fabrice Dev Portfolio</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Fabrice Dev</h1>
+      <nav aria-label="Main Navigation">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" aria-pressed="false">Toggle theme</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container">
+      <h2>Hi — I’m Fabrice. I build accessible, responsive websites.</h2>
+      <p>Developer, student, and creator. Browse my projects below.</p>
+      <img src="assets/images/hero.webp" alt="Laptop and code" width="800" height="450" loading="lazy" srcset="assets/images/hero-400.webp 400w, assets/images/hero-800.webp 800w" sizes="(max-width:600px) 100vw, 800px">
+    </section>
+
+    <section class="featured container" id="featured">
+      <h3>Featured Projects</h3>
+      <div id="projectList" class="project-grid" aria-live="polite">
+        <!-- JS injects project cards here using template literals -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Fabrice Dev Portfolio</p>
+      <p><a href="refs.html">References & Image Credits</a></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

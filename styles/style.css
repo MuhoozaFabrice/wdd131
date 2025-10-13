@@ -1,0 +1,26 @@
+:root{
+  --bg:#F9FAFB; --text:#111827; --primary:#1E3A8A; --accent:#FBBF24;
+  --max-width:1200px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Roboto, Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:white;border-bottom:1px solid #e5e7eb}
+.logo{margin:0;padding:.5rem 0}
+.nav{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav a{text-decoration:none;color:var(--primary);padding:.5rem}
+.hero{padding:1rem 0}
+.project-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.project-card{background:white;padding:1rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#000;color:#fff;padding:.5rem}
+
+@media(min-width:700px){
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:1000px){
+  .project-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Dark theme support saved in localStorage */
+body.theme-dark{background:#0f172a;color:#e6eef8}

@@ -1,0 +1,187 @@
+/* Modern professional palette using CSS variables */
+:root{
+  --bg: #0f1724;        /* base dark-ish (overridden by light theme) */
+  --card: rgba(255,255,255,0.04);
+  --muted: #9aa4b2;
+  --text: #e6eef8;
+  --accent: #7c5cff;   /* default accent (purple) */
+  --accent-2: #00c2a8; /* secondary accent (teal) */
+  --glass: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.08);
+  --radius: 12px;
+  --maxw: 1200px;
+}
+
+/* Light theme overrides (applied by removing body.theme-dark) */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
+  line-height: 1.6; /* ENHANCEMENT: Better readability */
+  background: var(--bg); /* ENHANCEMENT: Set base background */
+  transition: color 0.3s ease, background 0.3s ease; /* ENHANCEMENT: Smooth theme transition */
+  
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* When user chooses dark theme we apply deep background */
+body.theme-dark {
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.03);
+  --text: #e6eef8;
+  background: linear-gradient(180deg,#071225 0%, #071229 100%);
+}
+
+/* Container */
+.container{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:1.25rem;
+}
+
+/* Header */
+.site-header{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 0;
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index:30;
+
+}
+.logo{
+  font-weight:700;
+  font-size:1.25rem;
+  color:white;
+  text-decoration:none;
+}
+.logo .dot{ color: var(--accent); margin-left:6px; }
+
+.project-card {
+    /* Sets a base width, but allows the card to shrink */
+    /* This makes sure each card takes up about half the container's width,
+       but can adjust for different screen sizes. */
+    flex: 1 1 45%; 
+    max-width: 400px; /* Prevents cards from getting too wide on large screens */
+    
+    /* Box model styles */
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--glass);
+    
+    /* Other visual styles from your original design */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the image inside the card */
+.project-card img {
+    /* Makes the image fill the available width of the card */
+    width: 100%;
+    /* Maintains aspect ratio */
+    height: auto;
+    /* Rounds the corners of the image */
+    border-radius: 6px; 
+}
+
+/* nav */
+.main-nav ul{ list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center;}
+.main-nav a{ text-decoration:none; color:var(--muted); padding:0.35rem 0.5rem; border-radius:8px; font-weight:600; font-size:.95rem;}
+.main-nav a[aria-current="page"]{ color:var(--accent); background: linear-gradient(90deg, rgba(124,92,255,0.08), rgba(0,194,168,0.03)); }
+
+/* Buttons */
+.btn{ display:inline-block; padding:0.55rem 0.9rem; border-radius:10px; border:0; background:transparent; color:var(--text); cursor:pointer; font-weight:600; }
+.btn.primary, .btn.btn-primary{ background: linear-gradient(90deg,var(--accent),var(--accent-2)); color: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.12); border: none; }
+.btn.ghost, .btn.ghost:hover{ background: transparent; border: 1px solid rgba(255,255,255,0.06); color:var(--muted); }
+.btn.small{ padding:0.35rem 0.6rem; font-size:.85rem; border-radius:8px; }
+
+/* Hero */
+.hero{ display:grid; grid-template-columns: 1fr; gap:1.25rem; align-items:center; padding:2rem 0; }
+/* FIX: Removed hardcoded color #0b1220; to rely on text variable */
+.hero-left h1{ font-size:2.4rem; margin:0 0 0.5rem 0; } 
+body.theme-dark .hero-left h1{ color: var(--text); }
+.lead{ color: var(--muted); max-width:52ch; margin-bottom:1rem; }
+
+/* ENHANCEMENT: Add spacing to CTA row */
+.cta-row { margin-top: 1.5rem; display: flex; gap: 1rem;} 
+
+/* hero right */
+.hero-right{ display:flex; justify-content:center; align-items:left; text-align: center; }
+.hero-card{ width:70%; max-width:500px; border-radius: var(--radius); overflow:hidden; box-shadow: 0 8px 30px rgba(10,20,40,0.12); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid var(--glass-border); padding:0.5rem; }
+.hero-card img{ width:50%; display: flex; height:auto; }
+
+/* BUG FIX: REMOVED redundant and conflicting .hero-right block */
+
+/* Featured / Projects */
+.section-head{ display:flex; justify-content:space-between; align-items:center; gap:1rem; margin:1.25rem 0; }
+.grid{ display:grid; grid-template-columns: repeat(1,1fr); gap:1rem; }
+@media(min-width:700px){ .hero{ grid-template-columns: 1fr 520px; } .grid{ grid-template-columns: repeat(2, 1fr);} }
+@media(min-width:1000px){ .grid{ grid-template-columns: repeat(3, 1fr);} }
+
+/* Card style for project */
+.card, .project-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 20px rgba(8,12,20,0.08);
+}
+.project-card img{ width:100%; height:180px; object-fit:cover; border-radius:8px; display:block; margin-bottom:0.75rem; }
+.project-card h3{ margin:0 0 0.5rem 0; font-size:1.1rem;}
+.project-card p{ color:var(--muted); font-size:.95rem; }
+
+/* footer */
+.site-footer{ padding:1.5rem 0; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); margin-top:2rem; }
+
+/* small utilities */
+.skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+.skip-link:focus{ left:1rem; top:1rem; width:auto; height:auto; background:#000; color:#fff; padding:.5rem }
+
+/* Modal */
+.modal-root{ position: fixed; inset:0; display:flex; align-items:center; justify-content:center; z-index:60; }
+.modal{ background: rgba(3,6,18,0.6); padding:2rem; border-radius:12px; max-width:760px; width:calc(100% - 2rem); color:var(--text); }
+.modal .close{ float:right; background:transparent; border:none; font-size:1.1rem; color:var(--muted); }
+
+/* subtle interactive hover */
+a, button {
+  transition: transform .18s ease; /* ENHANCEMENT: Base transition for smoothness */
+}
+a:hover, button:hover{ 
+  transform: translateY(-1px); 
+}
+
+/* form */
+input, textarea{ 
+  width:100%; 
+  padding:0.6rem; 
+  border-radius:8px; 
+  border:1px solid rgba(255,255,255,0.08); /* Changed to use white for dark theme consistency */
+  margin-bottom:0.75rem; 
+  background:var(--card); /* ENHANCEMENT: Use card background for form fields */
+  color:var(--text); 
+}
+/* ENHANCEMENT: Focus state for accessibility and professionalism */
+input:focus, textarea:focus {
+  outline: 1px solid var(--accent);
+  border-color: var(--accent);
+}
+
+
+
+
+
+

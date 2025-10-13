@@ -1,0 +1,86 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+  --text-color: #222;
+  --accent: #3fa9f5;
+  --light: #fff;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--bg-gradient);
+  color: var(--light);
+  padding: 1rem 0;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--light);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.projects-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  background: var(--bg-gradient);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
